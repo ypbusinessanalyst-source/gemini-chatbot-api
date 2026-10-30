@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YP-AI-Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+</head>
+<body>
+  <div class="background-decor" aria-hidden="true">
+    <span class="orb orb-violet"></span>
+    <span class="orb orb-magenta"></span>
+    <span class="orb orb-cyan"></span>
+    <span class="orb orb-amber"></span>
+  </div>
+
+  <main class="chat-wrapper">
+    <header class="chat-header">
+      <div class="avatar-container">
+        <div class="avatar-glow"></div>
+        <div class="avatar-icon">✦</div>
+      </div>
+      <div class="header-info">
+        <h1>YP-AI-Assistant</h1>
+        <p class="status"><span class="status-dot"></span> Online · Flash</p>
+      </div>
+    </header>
+
+    <section id="chat-messages" class="chat-messages" aria-live="polite"></section>
+
+    <form id="chat-form" class="chat-form">
+      <label class="sr-only" for="chat-input">Pesan</label>
+      <textarea
+        id="chat-input"
+        rows="1"
+        placeholder="Tulis pesan..."
+        autocomplete="off"
+      ></textarea>
+      <button type="submit" id="send-btn" aria-label="Kirim pesan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
